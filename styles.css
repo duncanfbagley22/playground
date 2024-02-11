@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Dark grey background */
+}
+
+.container {
+    display: inline-flex;
+    flex-wrap: wrap; /* Allow squares to wrap onto new lines */
+    justify-content: center; /* Center squares horizontally */
+    width: 100%; /* Optional: Adjust width as needed */
+    max-width: 400px; /* Optional: Adjust max-width as needed */
+    height: 80%; /* Optional: Adjust height as needed */
+    max-height: 400px; /* Optional: Adjust max-height as needed */
+    overflow: hidden; /* Prevent overflow */
+  }
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; /* Adjust spacing between squares */
+  width: 80%; /* Optional: Adjust width as needed */
+  max-width: 400px; /* Optional: Adjust max-width as needed */
+  height: 80%; /* Optional: Adjust height as needed */
+  max-height: 400px; /* Optional: Adjust max-height as needed */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.square-container {
+    position: relative;
+    width: 40%; /* Each square-container takes 50% width of the container */
+    height: 30%; /* Each square-container takes 33.33% height of the container (since there are 3 rows) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.square-container2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+    background-color: #ddd; /* Light grey background */
+    width: 55%; 
+    height: 75%; 
+    border: 1px solid #999; /* Add border to squares */
+  }
+
+.square2 {
+  background-color: #ddd; /* Light grey background */
+  width: 100px; /* Adjust width of squares */
+  height: 100px; /* Adjust height of squares */
+  border: 1px solid #999; /* Add border to squares */
+}
+
+.word {
+  color: white; /* Optional: Adjust color as needed */
+  position: absolute; /* Position the words relative to the container */
+  bottom: -10px; /* Adjust vertical position of the words */
+  left: 50%; /* Center the words horizontally */
+  transform: translateX(-50%); /* Center the words horizontally */
+  white-space: nowrap; /* Prevent words from wrapping */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Display an ellipsis (...) if the text overflows */
+}
+
+.square:hover {
+    border: 7px solid black; /* Change border style when hovered */
+}
+
+  /* Different colors for each square */
+  .square-container:nth-child(1) .square {
+    background-color: #385B8C;
+  }
+  .square-container:nth-child(2) .square {
+    background-color: #BDD5EA;
+  }
+  .square-container:nth-child(3) .square {
+    background-color: #7B6DAA;
+  }
+  .square-container:nth-child(4) .square {
+    background-color: #547A5E;
+  }
+  .square-container:nth-child(5) .square {
+    background-color: #A52A2A;
+  }
+  .square-container:nth-child(6) .square {
+    background-color: #D9A65D;
+  }
+
+  .square-container2:nth-child(1) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(2) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(3) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(4) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(5) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(6) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(7) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(8) .square2 {
+    background-color: #385B8C;
+  }
+  .square-container2:nth-child(9) .square2 {
+    background-color: #385B8C;
+  }
