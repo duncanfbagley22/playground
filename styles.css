@@ -122,3 +122,12 @@ body {
   .square-container2:nth-child(9) .square2 {
     background-color: #385B8C;
   }
+
+  .back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+  }
