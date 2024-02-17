@@ -8,35 +8,41 @@
 </head>
 <body>
   <div class="container">
-    <a href="page1.html" class="square-container">
+    <a href="page1.html" class="square-container" onclick="storeColor(Color1)">
       <div class="square"></div>
       <div class="word">Physical</div>
     </a>
-    <a href="page2.html" class="square-container">
+    <a href="page2.html" class="square-container" onclick="storeColor(Color2')">
       <div class="square"></div>
       <div class="word">Mental</div>
     </a>
-    <a href="page3.html" class="square-container">
+    <a href="page3.html" class="square-container" onclick="storeColor(Color3)">
       <div class="square"></div>
       <div class="word">Social</div>
     </a>
-    <a href="page4.html" class="square-container">
+    <a href="page4.html" class="square-container" onclick="storeColor(Color4)">
       <div class="square"></div>
       <div class="word">Financial</div>
     </a>
-    <a href="page5.html" class="square-container">
+    <a href="page5.html" class="square-container" onclick="storeColor(Color5)">
       <div class="square"></div>
       <div class="word">Personal</div>
     </a>
-    <a href="page6.html" class="square-container">
+    <a href="page6.html" class="square-container" onclick="storeColor(Color6)">
       <div class="square"></div>
       <div class="word">Professional</div>
     </a>
   </div>
+  <script>
+    function storeColor(color) {
+    localStorage.setItem('selectedColor', color);
+  }
+  const Color1 = getComputedStyle(document.documentElement).getPropertyValue('--index-square-1-color');
+  const Color2 = getComputedStyle(document.documentElement).getPropertyValue('--index-square-2-color');
+  const Color3 = getComputedStyle(document.documentElement).getPropertyValue('--index-square-3-color');
+  const Color4 = getComputedStyle(document.documentElement).getPropertyValue('--index-square-4-color');
+  const Color5 = getComputedStyle(document.documentElement).getPropertyValue('--index-square-5-color');
+  const Color6 = getComputedStyle(document.documentElement).getPropertyValue('--index-square-6-color');
+  </script>
 </body>
 </html>
-<script>
-  function storeColor(color) {
-  localStorage.setItem('selectedColor', color);
-}
-</script>
