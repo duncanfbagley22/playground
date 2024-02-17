@@ -27,13 +27,12 @@ body {
   max-width: 400px; /* Optional: Adjust max-width as needed */
   height: 80%; /* Optional: Adjust height as needed */
   max-height: 400px; /* Optional: Adjust max-height as needed */
-  overflow: hidden; /* Prevent overflow */
 }
 
 .square-container {
     position: relative;
-    width: 40%; /* Each square-container takes 50% width of the container */
-    height: 30%; /* Each square-container takes 33.33% height of the container (since there are 3 rows) */
+    width: 40%; /* Each square-container takes 40% width of the container */
+    height: 30%; /* Each square-container takes 30% height of the container (since there are 3 rows) */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +50,7 @@ body {
     width: 55%; 
     height: 75%; 
     border: 1px solid #999; /* Add border to squares */
+    box-sizing: border-box; /* Include border and padding in width and height calculations */
   }
 
 .square2 {
@@ -58,6 +58,7 @@ body {
   width: 100px; /* Adjust width of squares */
   height: 100px; /* Adjust height of squares */
   border: 1px solid #999; /* Add border to squares */
+  box-sizing: border-box; /* Include border and padding in width and height calculations */
 }
 
 .word {
@@ -72,7 +73,10 @@ body {
 }
 
 .square:hover {
-    border: 7px solid black; /* Change border style when hovered */
+    border: 5px solid black; /* Change border style when hovered */
+}
+.square2:hover {
+  border: 5px solid black; /* Change border style when hovered */
 }
 
   /* Different colors for each square */
