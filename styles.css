@@ -81,50 +81,34 @@ body {
 
   /* Different colors for each square */
   .square-container:nth-child(1) .square {
-    background-color: #385B8C;
+    background-color: var(--index-square-1-color);
   }
   .square-container:nth-child(2) .square {
-    background-color: #BDD5EA;
+    background-color: var(--index-square-2-color);
   }
   .square-container:nth-child(3) .square {
-    background-color: #7B6DAA;
+    background-color: var(--index-square-3-color);
   }
   .square-container:nth-child(4) .square {
-    background-color: #547A5E;
+    background-color: var(--index-square-4-color);
   }
   .square-container:nth-child(5) .square {
-    background-color: #A52A2A;
+    background-color: var(--index-square-5-color);
   }
   .square-container:nth-child(6) .square {
-    background-color: #D9A65D;
+    background-color: var(--index-square-6-color);
   }
 
-  .square-container2:nth-child(1) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(2) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(3) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(4) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(5) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(6) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(7) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(8) .square2 {
-    background-color: #385B8C;
-  }
-  .square-container2:nth-child(9) .square2 {
-    background-color: #385B8C;
+  .square-container2:nth-of-type(1) .square2,
+  .square-container2:nth-of-type(2) .square2,
+  .square-container2:nth-of-type(3) .square2,
+  .square-container2:nth-of-type(4) .square2,
+  .square-container2:nth-of-type(5) .square2,
+  .square-container2:nth-of-type(6) .square2,
+  .square-container2:nth-of-type(7) .square2,
+  .square-container2:nth-of-type(8) .square2,
+  .square-container2:nth-of-type(9) .square2 {
+      background-color: var(--index-square-1-color);
   }
 
   .back-arrow {
@@ -134,4 +118,13 @@ body {
     font-size: 24px;
     text-decoration: none;
     color: black;
+  }
+
+  :root {
+    --index-square-1-color: #385B8C;
+    --index-square-2-color: #BDD5EA;
+    --index-square-3-color: #7B6DAA;
+    --index-square-4-color: #547A5E;
+    --index-square-5-color: #A52A2A;
+    --index-square-6-color: #D9A65D;
   }

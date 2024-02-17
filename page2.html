@@ -48,3 +48,12 @@
   </div>
 </body>
 </html>
+<script>
+  window.onload = function() {
+  const selectedColor = localStorage.getItem('selectedColor');
+  const squares = document.querySelectorAll('.square2');
+  squares.forEach(square => {
+    square.style.backgroundColor = selectedColor;
+  });
+}
+</script>
