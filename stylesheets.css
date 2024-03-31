@@ -1,0 +1,117 @@
+/* Reset or Normalize (You may include a reset or normalize CSS file here) */
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #daf8fe
+}
+
+/* Typography */
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Buttons */
+.centered-button {
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FEE0DA;
+    color: #000000;
+    border: 3px rgb(24, 23, 23);
+    border-radius: 10px; /* Adjust the value to control the roundness of the edges */
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.centered-button:hover {
+    background-color: #ffeeea;
+  }
+.centered-button:active {
+    background-color: #FEE0DA;
+  }
+
+
+/* Background and Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+#squarecontainer {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 60vh;
+    width: 30vw;
+    flex-wrap: wrap; /* Enable wrapping */
+    position: absolute; /* Position the container */
+    top: 30%; /* Align the top edge of the container with the middle of the viewport */
+    left: 50%; /* Align the left edge of the container with the middle of the viewport */
+    transform: translate(-50%, -50%); /* Adjust the position to center the container */
+}
+
+/* Links */
+a {
+    color: #007bff; /* Blue color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Square */
+.square {
+    width: calc(50% - 20px); /* Adjust width to fit two squares per row */
+    height: auto;
+    padding-bottom: calc(50% - 20px); /* Set the height based on the width (1:1 aspect ratio) */
+    margin: 10px;
+    display: none; /* Initially hide the squares */
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    box-sizing: border-box; /* Include border and padding in the total width and height */
+    border: 2px solid transparent; /* Initially set a transparent border */
+    transition: all 0.3s ease; /* Smooth transition effect for changes */
+}
+
+.square:hover {
+    border: 2px solid black; /* Example: thicker border on hover */
+    opacity: -1; /* Example: reduced opacity on hover */
+}
+
+.fade-in {
+    animation: fadeInAnimation 0.2s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
