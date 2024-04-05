@@ -26,18 +26,17 @@ p {
 
 /* Buttons */
 .centered-button {
-    position: absolute;
-    top: 96%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
+    position: relative;
     font-size: 16px;
-    background-color: #FEE0DA;
+    background-color: #f4a696;
     color: #000000;
-    border: 3px rgb(24, 23, 23);
     border-radius: 10px; /* Adjust the value to control the roundness of the edges */
     cursor: pointer;
     transition-duration: 0.4s;
+    white-space: nowrap;
+    padding: 10px 20px;
+    display: inline-block; /* Make buttons sit next to each other horizontally */
+    margin: 0 calc((10vw - 20px * 2 * 3) / 4); /* Calculate margin based on square container width */
 }
 .centered-button:hover {
     background-color: #ffeeea;
@@ -45,15 +44,20 @@ p {
 .centered-button:active {
     background-color: #FEE0DA;
   }
-
-
-/* Background and Container */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+#button-container {
+    text-align: center; /* Center the buttons horizontally */
+    width: 100%;
+}
+.centered-button-container {
+    position: absolute;
+    bottom: 15px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     
 }
+
+/* Background and Container */
 #squarecontainer {
     display: flex; /* Use flexbox to align items */
     justify-content: center; /* Center items horizontally */
@@ -87,19 +91,18 @@ a:hover {
 /* Square */
 .square {
     width: calc(50% - 20px); /* Adjust width to fit two squares per row */
-    height: auto;
+    height: calc(50% - 20px);
     padding-bottom: calc(50% - 20px); /* Set the height based on the width (1:1 aspect ratio) */
     margin: 10px;
     display: none; /* Initially hide the squares */
     border-radius: 10px; /* Adjust the value to control the roundness of the corners */
     box-sizing: border-box; /* Include border and padding in the total width and height */
-    border: 2px solid transparent; /* Initially set a transparent border */
+    border: 3px solid transparent; /* Initially set a transparent border */
     transition: all 0.3s ease; /* Smooth transition effect for changes */
 }
 
 .square:hover {
-    border: 2px solid black; /* Example: thicker border on hover */
-    opacity: -1; /* Example: reduced opacity on hover */
+    opacity: .75 !important
 }
 
 .fade-in {
@@ -115,3 +118,16 @@ a:hover {
         opacity: 1;
     }
 }
+
+.word-overlay {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 180%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1; /* Ensure it appears above the squares */
+    font-size: 40px; /* Adjust the font size as needed */
+}
+
