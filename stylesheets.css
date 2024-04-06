@@ -23,6 +23,20 @@ p {
     line-height: 1.5;
     color: #666;
 }
+/* Titles */
+
+.centered-title {
+    position: relative;
+    font-size: 36px;
+    background-color: #f4a696;
+    color: #000000;
+    border-radius: 10px; /* Adjust the value to control the roundness of the edges */
+    transition-duration: 0.4s;
+    white-space: nowrap;
+    padding: 10px 50px;
+    display: inline-block; /* Make buttons sit next to each other horizontally */
+    border: 2px solid black;
+}
 
 /* Buttons */
 .centered-button {
@@ -44,6 +58,21 @@ p {
 .centered-button:active {
     background-color: #FEE0DA;
   }
+
+
+/* Background and Container */
+#title-container {
+    text-align: center; /* Center the buttons horizontally */
+    width: 100%;
+}
+.centered-title-container {
+    position: absolute;
+    top: 15px; /* Adjust the distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;   
+}
+
 #button-container {
     text-align: center; /* Center the buttons horizontally */
     width: 100%;
@@ -56,17 +85,15 @@ p {
     width: 100%;
     
 }
-
-/* Background and Container */
 #squarecontainer {
     display: flex; /* Use flexbox to align items */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    height: 60vh;
-    width: 30vw;
+    height: 50vh;
+    width: 25vw;
     flex-wrap: wrap; /* Enable wrapping */
     position: absolute; /* Position the container */
-    top: 30%; /* Align the top edge of the container with the middle of the viewport */
+    top: 37%; /* Align the top edge of the container with the middle of the viewport */
     left: 50%; /* Align the left edge of the container with the middle of the viewport */
     transform: translate(-50%, -50%); /* Adjust the position to center the container */
 }
@@ -90,9 +117,9 @@ a:hover {
 
 /* Square */
 .square {
-    width: calc(50% - 20px); /* Adjust width to fit two squares per row */
-    height: calc(50% - 20px);
-    padding-bottom: calc(50% - 20px); /* Set the height based on the width (1:1 aspect ratio) */
+    width: calc(50% - 25px); /* Adjust width to fit two squares per row */
+    height: calc(50% - 25px);
+    padding-bottom: calc(50% - 25px); /* Set the height based on the width (1:1 aspect ratio) */
     margin: 10px;
     display: none; /* Initially hide the squares */
     border-radius: 10px; /* Adjust the value to control the roundness of the corners */
@@ -101,10 +128,41 @@ a:hover {
     transition: all 0.3s ease; /* Smooth transition effect for changes */
 }
 
+.subsquare {
+    width: calc(33% - 20px); /* Adjust width to fit three squares per row */
+    height: calc(33% - 20px);
+    padding-bottom: calc(33% - 20px); /* Set the height based on the width (1:1 aspect ratio) */
+    margin: 10px;
+    display: none; /* Initially hide the squares */
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    box-sizing: border-box; /* Include border and padding in the total width and height */
+    border: 3px solid transparent; /* Initially set a transparent border */
+    transition: all 0.3s ease; /* Smooth transition effect for changes */
+}
+
+
 .square:hover {
     opacity: .75 !important
 }
 
+.subsquare:hover {
+    opacity: .75 !important
+}
+
+.word-overlay {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 160%);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1; /* Ensure it appears above the squares */
+    font-size: 40px; /* Adjust the font size as needed */
+}
+
+
+/* Animations */
 .fade-in {
     animation: fadeInAnimation 0.2s ease-in forwards;
     opacity: 0;
@@ -119,15 +177,5 @@ a:hover {
     }
 }
 
-.word-overlay {
-    position: relative;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, 180%);
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    z-index: 1; /* Ensure it appears above the squares */
-    font-size: 40px; /* Adjust the font size as needed */
-}
+
 
